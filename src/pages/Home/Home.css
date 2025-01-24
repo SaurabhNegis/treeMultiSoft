@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poly:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Road+Rage&display=swap');
+/* src/pages/Home.css */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poly:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Road+Rage&display=swap');
+
+.home-container {
+    font-family: Montserrat, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-width: 2000px; /* Max width for large screens */
+    margin: 0 auto; /* Centers the container horizontally */
+  
+  }
+  
+  /* Header Section */
+  .header-section {
+    color: white;
+
+    padding: 100px 40px;
+
+  } 
+  
+  
+  .header-content{
+    margin-bottom: 100px;
+  }
+
+  .header-content h1{
+  font-size:42px;
+  line-height: 1.5;
+  
+  }
+
+  
+  .header-content p {
+    font-size: 18px;
+    max-width: 600px;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    /* height: 90px; */
+    color: white;
+    padding: 18px 48px!important;
+    border: none;
+    margin-bottom: 35px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 
+              0 1px 3px rgba(0, 0, 0, 0.06); /* Subtle shadow */
+  }
+
+  .cta-button:hover {
+    background-color:rgb(231, 67, 17);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), 
+              0 2px 4px rgba(0, 0, 0, 0.1); /* Stronger shadow on hover */
+
+  }
+
+  .stat-item h2{
+    font-family: Lato , sans-serif;
+   font-size: 45px;
+   font-weight:500;
+  }
+  .stat-item{
+  margin-bottom:30px;
+  }
+  
+  /* .header-image {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+  } */
+
+  .header-stats{
+  }
+
+.svg-container{
+    position: absolute;
+    top: 15%; /* Adjusts vertical position */
+    right: -10%; /* Moves the SVG half out of the screen from the left */
+    transform: translateY(-50%); /* Center it vertically */
+    z-index: -1
+}
+
+  .headerSvg{
+   /* Moves the SVG half out of the screen from the left */
+  }
+
+
+
+
+
+  /* client Section css */
+
+  .clients-section {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #f9f9f9; /* Light background for contrast */
+  }
+  
+  .clients-text h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #333; /* Darker color for headings */
+  }
+  
+  .clients-text p {
+    font-size: 1.2rem;
+    color: #555; /* Subdued text color */
+    margin-bottom: 2rem;
+  }
+  
+  .clients-text h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 2rem;
+  }
+  
+  .clients-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Makes the logos wrap on smaller screens */
+    gap: 2.5rem; /* Spacing between logos */
+  }
+  
+  .logo {
+    width: 200px;
+    height: auto;
+    filter: grayscale(100%); 
+    transition: filter 0.3s ease-in-out;
+  }
+  
+  .logo:hover {
+    filter: none; /* Removes greyscale on hover */
+  }
+  
+
+
+
+
+
+  /* About and Values Section */
+.about-values-section {
+  padding: 60px 20px;
+  position: relative;
+  background: #F6F4F9;
+  overflow: hidden;
+}
+
+.about-content {
+  text-align: ;
+  margin-bottom: 40px;
+  display: grid;
+  place-items: center end; /* Center vertically and align to the right */
+  /* margin-right: 200px; */
+
+}
+
+.about-content h2 {
+  max-width: 500px;
+
+  font-size: 2.2rem;
+  color: #333;
+  margin-bottom: 20px;
+  
+}
+
+.about-content p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+.values-section {
+  text-align: center;
+}
+
+.values-section h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(263px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.value-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+
+}
+
+.value-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.value-item p {
+  font-size: 1rem;
+  color: #444;
+  margin: 0;
+}
+
+.svg-container1{
+  position: absolute;
+  top: 30%; /* Adjusts vertical position */
+  left: -15%;
+  right:; /* Moves the SVG half out of the screen from the left */
+  transform: translateY(-50%); /* Center it vertically */
+  z-index: 100
+}

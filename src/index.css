@@ -43,7 +43,6 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Paragraphs */
 p {
-  margin-bottom: 1rem;
   color: #555; /* Slightly lighter than default text */
 }
 
@@ -59,7 +58,11 @@ a:hover {
 }
 
 .main-color{
-  color: #DC4618;
+  color: #DC4618 !important;
+}
+
+.bg-main-color{
+ background: #DC4618;
 }
 
 /* ===============================
@@ -85,6 +88,14 @@ a:hover {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.align-items{
+  align-items: center;
+}
+
+.text-align-center{
+ text-align: center;
 }
 
 /* Spacing Utilities */
@@ -126,16 +137,16 @@ input:focus, textarea:focus, select:focus {
 
 button {
   cursor: pointer;
-  background-color: #0077ff;
+  /* background-color: #0077ff; */
   color: #fff;
   border: none;
   border-radius: 4px;
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
   transition: background-color 0.2s ease-in-out;
 }
 
 button:hover {
-  background-color: #0056cc;
+  background-color:rgb(202, 101, 39);
 }
 
 /* ===============================
@@ -210,6 +221,14 @@ button:hover {
   gap: 32px;
 }
 
+.gap-xxl {
+  gap: 50px;
+}
+
+.gap-xxxl{
+  gap: 60px;
+}
+
 
 /* ===========================
    Color System
@@ -230,7 +249,7 @@ button:hover {
   --color-gray-900: #3b3b3b;
 
 /* Primary Colors */
-  --color-primary: #4a90e2; /* Adjust this to match your brand's primary color */
+  --color-primary: #DC4618; /* Adjust this to match your brand's primary color */
   --color-primary-light: #72b4f3;
   --color-primary-dark: #3b78c0;
 
@@ -285,6 +304,9 @@ button:hover {
   color: var(--color-text-primary);
 }
 
+.text-color-gray-700{
+  color: var(--color-gray-700)
+}
 .text-secondary {
   color: var(--color-text-secondary);
 }
