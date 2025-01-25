@@ -4,12 +4,130 @@ import HeaderSvg from '../../assets/svgjsx/headerSvg.jsx'
 import Creative from '../../assets/svgjsx/creative.jsx'
 import TechnologySectionSvg from '../../assets/svgjsx/technologySectionSvg.jsx'
 import {brandImgs, technologyIcons,  serviceSvg} from "../../assets/assets.js"
-
-
+import Slider from "react-slick"; // Make sure this import is correct
+import picture from "../../assets/images/picture.png"
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import ReactStars from "react-stars";
 
 
 
 const Home = () => {
+  const settings = {
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 2500,
+    slidesToShow: 3, // Show 3 slides at a time (adjust based on your screen size)
+    slidesToScroll: 1,
+    dots: true,
+    centerMode: true, // For better control of spacing
+    centerPadding: '0', // Disable additional padding around centered slide
+    responsive: [
+      {
+        breakpoint: 1024, // 1024px and below
+        settings: {
+          slidesToShow: 3, // Show 3 slides on medium screens
+        },
+      },
+      {
+        breakpoint: 768, // 768px and below
+        settings: {
+          slidesToShow: 2, // Show 2 slides on smaller screens
+        },
+      },
+      {
+        breakpoint: 480, // 480px and below
+        settings: {
+          slidesToShow: 1, // Show 1 slide on very small screens
+        },
+      },
+    ],
+  };
+  
+
+
+
+
+  const testimonials = [
+    {
+      name: "Stephen Brekke",
+      position: "Legacy Integration Producer",
+      message:
+        "If you want real marketing that works and effective implementation - mobile app's got you covered.",
+      rating: 5,  // 5-star rating
+
+
+      
+    },
+    {
+      name: "Jane Doe",
+      position: "Digital Marketing Specialist",
+      message:
+        "Their services are unmatched, and the team truly goes above and beyond to deliver excellence.",
+      rating: 5,  // 5-star rating
+
+    },
+    {
+      name: "John Smith",
+      position: "Product Manager",
+      message:
+        "A seamless experience from start to finish. Highly recommended for all your digital needs.",
+      rating: 5,  // 5-star rating
+
+    },
+    {
+      name: "John Smith",
+      position: "Product Manager",
+      message:
+        "A seamless experience from start to finish. Highly recommended for all your digital needs.",
+      rating: 5,  // 5-star rating
+
+    },
+    {
+      name: "John Smith",
+      position: "Product Manager",
+      message:
+        "A seamless experience from start to finish. Highly recommended for all your digital needs.",
+      rating: 5,  // 5-star rating
+
+    },
+    {
+      name: "John Smith",
+      position: "Product Manager",
+      message:
+        "A seamless experience from start to finish. Highly recommended for all your digital needs.",
+      rating: 5,  // 5-star rating
+
+    },
+    {
+      name: "John Smith",
+      position: "Product Manager",
+      message:
+        "A seamless experience from start to finish. Highly recommended for all your digital needs.",
+      rating: 5,  // 5-star rating
+
+    },
+    {
+      name: "John Smith",
+      position: "Product Manager",
+      message:
+        "A seamless experience from start to finish. Highly recommended for all your digital needs.",
+      rating: 5,  // 5-star rating
+
+    },
+    {
+      name: "John Smith",
+      position: "Product Manager",
+      message:
+        "A seamless experience from start to finish. Highly recommended for all your digital needs.",
+      rating: 5,  // 5-star rating
+
+    },
+    
+    
+  ];
+
 
 
   return (
@@ -275,6 +393,37 @@ const Home = () => {
   </button>
 
 </section>
+
+<section className="testimonial-section">
+<h2>What Our Clients Say</h2>
+      <div className="testimonial-container">
+        <Slider {...settings} className="testimonial-slider">
+          {testimonials.map((testimonial, index) => (
+            <div key={index} className="testimonial-slide">
+              <div className="slider-img">
+                <img src={picture} alt={testimonial.name} />
+              </div>
+              <div className="slider-star">
+
+              <ReactStars
+                count={5}
+                value={testimonial.rating}
+                size={24}
+                color2={"#DC4618"}
+                edit={false} // Set to true if you want the user to edit
+              />
+              </div>
+              <p className="slider-text">"{testimonial.message}"</p>
+              <div className="slider-reviewer">
+              <h3>{testimonial.name}</h3>
+              <p className="slider-position">{testimonial.position}</p>
+
+              </div>
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </section>
 
     </div>
   );
