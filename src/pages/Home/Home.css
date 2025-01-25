@@ -13,7 +13,6 @@
     flex-direction: column;
     max-width: 2000px; /* Max width for large screens */
     margin: 0 auto; /* Centers the container horizontally */
-  
   }
   
   /* Header Section */
@@ -501,7 +500,7 @@
 /* Testimonial Section */
 .testimonial-section {
   padding: 48px 16px;
-  height:800px;
+  /* height:800px; */
 }
 
 /* Container */
@@ -616,8 +615,8 @@ padding-left: 10px;
   color: #718096;
 }
 
-.slick-list{
-  height: 500px;
+.testimonial-section .slick-list{
+  height: 400px;
 }
 
 /* Slick Navigation Arrows */
@@ -645,3 +644,45 @@ padding-left: 10px;
 }
 
 
+/* blog section css */
+
+.blog-section {
+  padding: 40px;
+  text-align: center;
+}
+.blog-section h2{
+  font-size: 42px;
+  margin-bottom: 60px;
+}
+
+.blog-card {
+  position: relative;
+  height: 500px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 95% !important;
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.blog-card h3 {
+  text-align: start;
+  margin-top: 20px;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.slick-prev, .slick-next {
+  z-index: 1;
+}
+
+
+.blog-section .slick-list{
+  height: 700px;
+}

@@ -2,6 +2,7 @@ import React from "react";
 import "./Home.css";
 import HeaderSvg from '../../assets/svgjsx/headerSvg.jsx'
 import Creative from '../../assets/svgjsx/creative.jsx'
+import { blogImgs } from "../../assets/assets.js";
 import TechnologySectionSvg from '../../assets/svgjsx/technologySectionSvg.jsx'
 import {brandImgs, technologyIcons,  serviceSvg} from "../../assets/assets.js"
 import Slider from "react-slick"; // Make sure this import is correct
@@ -11,13 +12,45 @@ import "slick-carousel/slick/slick-theme.css";
 import ReactStars from "react-stars";
 
 
-
 const Home = () => {
+
+  const blogSettings = {
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 2000,
+    slidesToShow: 3, // Show 3 slides at a time (adjust based on your screen size)
+    slidesToScroll: 1,
+    dots: true,
+    centerMode: true, // For better control of spacing
+    centerPadding: '0', // Disable additional padding around centered slide
+    responsive: [
+      {
+        breakpoint: 1024, // 1024px and below
+        settings: {
+          slidesToShow: 3, // Show 3 slides on medium screens
+        },
+      },
+      {
+        breakpoint: 768, // 768px and below
+        settings: {
+          slidesToShow: 2, // Show 2 slides on smaller screens
+        },
+      },
+      {
+        breakpoint: 480, // 480px and below
+        settings: {
+          slidesToShow: 1, // Show 1 slide on very small screens
+        },
+      },
+    ],
+  };
+
   const settings = {
     infinite: true,
     speed: 500,
     autoplay: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 2000,
     slidesToShow: 3, // Show 3 slides at a time (adjust based on your screen size)
     slidesToScroll: 1,
     dots: true,
@@ -45,9 +78,6 @@ const Home = () => {
     ],
   };
   
-
-
-
 
   const testimonials = [
     {
@@ -127,6 +157,51 @@ const Home = () => {
     
     
   ];
+
+  const blogs = [
+
+  {
+    id: 1,
+    image: blogImgs.blogImg1, // Replace with actual image paths
+    title: "How a Digital Marketing Company Drives Real Business Results",
+  },
+  {
+    id: 2,
+    image: blogImgs.blogImg2, // Replace with actual image paths
+    title: "How to Choose the Right Website Design Company for Your Business?",
+  },
+  {
+    id: 3,
+    image: blogImgs.blogImg3, // Replace with actual image paths
+    title: "The Benefits of working with Local Software DeveDevelopers ",
+  },
+  {
+    id: 4,
+    image: blogImgs.blogImg4, // Replace with actual image paths
+    title: "AI & Automation in Digital Marketing Companies 2025",
+  },
+  {
+    id: 5,
+    image: blogImgs.blogImg1, // Replace with actual image paths
+    title: "How a Digital Marketing Company Drives Real Business Results",
+  },
+  {
+    id: 6,
+    image: blogImgs.blogImg2, // Replace with actual image paths
+    title: "How to Choose the Right Website Design Company for Your Business?",
+  },
+  {
+    id: 7,
+    image: blogImgs.blogImg3, // Replace with actual image paths
+    title: "The Benefits of working with Local Software DeveDevelopers",
+  },
+  {
+    id: 8,
+    image: blogImgs.blogImg4, // Replace with actual image paths
+    title: "AI & Automation in Digital Marketing Companies 2025",
+  },
+  // Add more blog posts here
+];
 
 
 
@@ -425,6 +500,21 @@ const Home = () => {
       </div>
     </section>
 
+
+
+<section>
+<div className="blog-section">
+      <h2>Latest Blog Posts</h2>
+      <Slider {...blogSettings} className="blog-slider">
+        {blogs.map((blog) => (
+          <div key={blog.id} className="blog-card">
+            <img src={blog.image} alt={blog.title} />
+            <h3>{blog.title}</h3>
+          </div>
+        ))}
+      </Slider>
+    </div>
+</section>
     </div>
   );
 };

@@ -26,7 +26,10 @@ import DigitalMarketingsvg  from "../assets/svgjsx/Digital_Marketing_svg.jsx"
 import smsMarketingsvg  from "../assets/svgjsx/SMS_Marketing_SVG.jsx"
 import cgdesignsvg  from "../assets/svgjsx/cg_design_svg.jsx"
 import domainregistrationsvg  from "../assets/svgjsx/domain_registration_svg.jsx"
-
+import blogImg1 from "../assets/images/blogImg1.png"
+import blogImg2 from "../assets/images/blogImg2.png"
+import blogImg3 from "../assets/images/blogImg3.png"
+import blogImg4 from "../assets/images/blogImg4.png"
 
 export const brandImgs = [
    brand1,
@@ -64,4 +67,11 @@ export const serviceSvg = {
     cgdesignsvg,
     domainregistrationsvg,
     smsMarketingsvg
+}
+
+export const blogImgs = {
+    blogImg1,
+    blogImg2,
+    blogImg3,
+    blogImg4,
 }
