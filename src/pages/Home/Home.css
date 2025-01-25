@@ -83,7 +83,7 @@
 
 .svg-container{
     position: absolute;
-    top: 15%; /* Adjusts vertical position */
+    top: 5%; /* Adjusts vertical position */
     right: -10%; /* Moves the SVG half out of the screen from the left */
     transform: translateY(-50%); /* Center it vertically */
     z-index: -1
@@ -192,7 +192,7 @@
 .values-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(263px, 1fr));
-  gap: 20px;
+  gap: 40px;
   max-width: 1000px;
   margin: 0 auto;
 }
@@ -219,6 +219,8 @@
   font-size: 1rem;
   color: #444;
   margin: 0;
+  font-weight: 700;
+
 }
 
 .svg-container1{
@@ -228,4 +230,263 @@
   right:; /* Moves the SVG half out of the screen from the left */
   transform: translateY(-50%); /* Center it vertically */
   z-index: 100
+}
+
+
+/* Technology section css */
+
+
+.technology-section {
+  padding: 100px 40px;  /* text-align: center; */
+  /* background-color: #f9f9f9; */
+}
+.technology-container{
+  margin-left: 200px;
+
+}
+
+.technology-section h2 {
+  font-size: 42px;
+  color: #333;
+  margin-bottom: 50px;
+}
+
+.technology-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 90px;
+  max-width: 600px;
+  line-height: 30px;  
+
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+}
+
+.technology-grid {
+  display: flex;
+  /* justify-content: center; */
+  flex-wrap: wrap; /* Makes the logos wrap on smaller screens */
+  gap: 2.5rem; 
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.technology {
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.technology:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+
+/*  Services Section css */
+.services-section {
+  padding: 60px 20px;
+  /* background-color: #f9f9f9; */
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.4rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.services-section h3 {
+  font-size: 1.8rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.services-section h4 {
+  font-size: 1.5rem;
+  color: #333;
+  margin: 30px 0 10px;
+}
+
+.services-section p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-item {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.service-item img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+
+.other-services-button {
+  background: none; /* Button color */
+  color: black; /* Text color */
+  font-weight: 600;
+  padding: 20px 70px;
+  border: 1px solid var(--color-primary);
+  border-radius: 40px;
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  width: 330px;
+  margin:40px auto;
+}
+
+.other-services-button:hover {
+  background-color: #0056b3; /* Darken on hover */
+}
+
+.arrow {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+
+
+/* findyour-Solution */
+
+
+.findyour-Solution{
+  position: relative;
+}
+
+.custom-line {
+  border: 0;
+  height: 2px; /* Thickness of the line */
+  background-color: #E0E0E0; /* Line color */
+  margin: 35px 0; /* Spacing around the line */
+}
+
+
+
+.findyour-Solution p{
+  text-align: center;
+  color: #979797;
+  font-weight: 700;
+}
+
+.findyour-Solution p a{
+  text-decoration: underline;
+  margin-left: 20px;
+}
+
+
+.findyour-container{
+  height: 100px;
+}
+
+
+
+
+
+
+/*  */
+.industries-title{
+  margin-top: 30px;
+  margin-bottom: 70px;
+}
+
+.industries-title h2{
+  font-size: 42px;
+}
+
+.industries {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* Two equal columns */
+    gap: 45px;
+}
+
+@media (max-width: 768px) {
+  .industries {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Auto-fit on smaller screens */
+  }
+}
+
+
+.industry-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 15px;
+  background: #F6F4F9;
+  border: 3px solid #DC4618;
+  border-radius: 8px;
+  width: 70px;
+  height: 60px;
+}
+
+.industry-icon {
+  width: 24px;  /* Adjust to the size you need */
+  height: 24px;  /* Adjust to the size you need */
+}
+
+.industry-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.industry-item p{
+  font-weight: 600;
+}
+
+.industry-item {
+  display: flex;
+  align-items: center;
+
+  margin: auto;
+  width: 300px;
+
+}
+
+
+.industries-title{
+  text-align: center;
 }

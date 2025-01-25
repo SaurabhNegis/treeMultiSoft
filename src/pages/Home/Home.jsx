@@ -2,37 +2,13 @@ import React from "react";
 import "./Home.css";
 import HeaderSvg from '../../assets/svgjsx/headerSvg.jsx'
 import Creative from '../../assets/svgjsx/creative.jsx'
-import brand1 from "../../assets/images/brand1.png";
-import brand2 from "../../assets/images/brand2.png";
-import brand3 from "../../assets/images/brand3.png";
-import brand4 from "../../assets/images/brand4.webp";
-import brand5 from "../../assets/images/brand5.png";
-import brand6 from "../../assets/images/brand6.webp";
-import brand7 from "../../assets/images/brand7.webp";
-import brand8 from "../../assets/images/brand8.png";
-import brand9 from "../../assets/images/brand9.png";
-import {brandImgs} from "../../assets/assets.js"
-
-const brandLogos = [
-  { src: brand1, alt: "Brand 1" },
-  { src: brand2, alt: "Brand 2" },
-  { src: brand3, alt: "Brand 3" },
-  { src: brand4, alt: "Brand 4" },
-  { src: brand5, alt: "Brand 5" },
-  { src: brand6, alt: "Brand 6" },
-  { src: brand7, alt: "Brand 7" },
-  { src: brand9, alt: "Brand 9" },
-];
+import TechnologySectionSvg from '../../assets/svgjsx/technologySectionSvg.jsx'
+import {brandImgs, technologyIcons,  serviceSvg} from "../../assets/assets.js"
 
 
-const texhnologyIcon = [
-  {src:"", alt:"icon 1"},
-  {src:"", alt:"icon 1"},
-  {src:"", alt:"icon 1"},
-  {src:"", alt:"icon 1"},
-  {src:"", alt:"icon 1"},
-  {src:"", alt:"icon 1"},
-]
+
+
+
 const Home = () => {
 
 
@@ -128,22 +104,178 @@ const Home = () => {
       </section>
 
 
-            {/* Technology Section */}
-            <section className="technology-section">
+
+
+          {/* Technology Section */}
+       <section className="technology-section">
+        <div className="flex">
+          <div className="technology-container">
+
         <h2>Technologies We Use</h2>
         <p>Our development & integration expertise spreads across all modern technologies and platforms, while constantly adapting to cutting-edge trends that are here to stay!</p>
         <div className="technology-grid">
-          <div className="technology-item">React</div>
-          <div className="technology-item">Node.js</div>
-          <div className="technology-item">Python</div>
-          <div className="technology-item">Java</div>
-          <div className="technology-item">AWS</div>
-          <div className="technology-item">Docker</div>
-          <div className="technology-item">Kubernetes</div>
-          <div className="technology-item">MySQL</div>
+        {technologyIcons.map((tech, index) => (
+          <img key={index} src={tech} alt={tech.alt} className="technology" />
+        ))}
         </div>
+          </div>
+        <TechnologySectionSvg/>
+
+        </div>
+
       </section>
+
+      {/* Services Section */}
+<section className="services-section">
+  <h2>Our Services</h2>
+  <h3>"Services meticulously shaped to fit your business."</h3>
+  <p>Explore our wide range of services crafted to help businesses thrive in the digital age.</p>
+
+  <h4>Web Development & Design</h4>
+  <div className="services-grid">
+    <div className="service-item">
+    <serviceSvg.webdesigndevelopment/>
+      <h3>Web Design & Development</h3>
+      <p>Stunning, user-friendly designs that captivate your audience and reflect your brand identity.</p>
+    </div>
+    <div className="service-item">
+    <serviceSvg.Hostingsslsvg/>
+      <h3>Web Hosting & SSL Setup</h3>
+      <p>Reliable hosting solutions and SSL certificates to keep your site secure and fast.</p>
+    </div>
+    <div className="service-item">
+    <serviceSvg.cmssvg/>
+      <h3>Content Management Systems</h3>
+      <p>Effortless content control and updates with our robust CMS solutions.</p>
+    </div>
+  </div>
+
+  <h4>Digital Marketing</h4>
+  <div className="services-grid">
+    <div className="service-item">
+    <serviceSvg.DigitalMarketingsvg/>
+      <h3>Digital Marketing</h3>
+      <p>Drive growth with SEO, social media marketing, and PPC campaigns tailored to your goals.</p>
+    </div>
+    <div className="service-item">
+      <serviceSvg.smsMarketingsvg/>
+      <h3>Bulk SMS Marketing</h3>
+      <p>Reach customers instantly with engaging bulk messaging solutions that drive results.</p>
+    </div>
+  </div>
+
+  <h4>Creative Solutions</h4>
+  <div className="services-grid">
+    <div className="service-item">
+    <serviceSvg.webdesigndevelopment/>
+      <h3>CG Design</h3>
+      <p>High-quality computer graphics, 3D designs, and animations to elevate your brand's storytelling.</p>
+    </div>
+    <div className="service-item">
+    <serviceSvg.domainregistrationsvg/>
+
+      <h3>Domain Registration</h3>
+      <p>Secure your digital identity with professional domain registration services.</p>
+    </div>
+  </div>
+    {/* Other Services Button */}
+    <button className="other-services-button">
+    Other Services <span className="arrow">→</span>
+  </button>
+
+</section>
+
+
+<section className="findyour-Solution">
+  <div className="findyour-container">
+  <hr className="custom-line" />
+  <p>"Services meticulously shaped to fit your business." <span >      <a href="https://www.example.com" target="_blank" className="main-color" rel="noopener noreferrer">
+  FIND YOUR SOLUTION
+      </a>
+</span>
+  </p>
+<hr className="custom-line" />
+
+  </div>
+
+</section>
+
+
+
+<section className="industries-container flex flex-column">
+<div className="industries-title">
+  <p>We Help You</p>
+  <h2>Our Expertise</h2>
+  </div>
+<div className="industries ">
  
+  
+
+  <div className="industry-item   gap-sm">
+  <div className="industry-card">
+    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
+  </div>
+    <p className="industry-name ">Education</p>
+  </div>
+
+  <div className="industry-item  gap-sm">
+  <div className="industry-card">
+    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
+  </div>
+    <p className="industry-name">Energy & Utility</p>
+  </div>
+
+  <div className="industry-item  gap-sm">
+  <div className="industry-card">
+    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
+  </div>
+    <p className="industry-name">Real Estate</p>
+  </div>
+
+  <div className="industry-item  gap-sm">
+  <div className="industry-card">
+    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
+  </div>
+    <p className="industry-name">Government</p>
+  </div>
+
+  <div className="industry-item  gap-sm">
+  <div className="industry-card">
+    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
+  </div>
+  <p className="industry-name">Media & Entertainment</p>
+  </div>
+
+
+  <div className="industry-item  gap-sm">
+  <div className="industry-card">
+    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
+  </div>
+  <p className="industry-name">Ads & Marketing</p>
+  </div>
+
+  <div className="industry-item  gap-sm">
+  <div className="industry-card">
+    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
+  </div>
+  <p className="industry-name">Hospital</p>
+  </div>
+
+  <div className="industry-item  gap-sm">
+  <div className="industry-card">
+    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
+  </div>
+  <p className="industry-name">E-Commerce</p>
+  </div>
+  </div>
+
+
+    <button className="other-services-button">
+    Other industries <span className="arrow">→</span>
+  </button>
+
+</section>
+
     </div>
   );
 };

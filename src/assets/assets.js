@@ -19,6 +19,14 @@ import technologyIcon7 from "../assets/images/technologyIcon7.png"
 import technologyIcon8 from "../assets/images/technologyIcon8.png"
 import technologyIcon9 from "../assets/images/technologyIcon9.png"
 import technologyIcon10 from "../assets/images/technologyIcon10.png"
+import  webdesigndevelopment  from "../assets/svgjsx/web_design_development.jsx"
+import Hostingsslsvg from "../assets/svgjsx/Hosting_ssl_svg.jsx"
+import cmssvg from "../assets/svgjsx/cms_svg.jsx"
+import DigitalMarketingsvg  from "../assets/svgjsx/Digital_Marketing_svg.jsx"
+import smsMarketingsvg  from "../assets/svgjsx/SMS_Marketing_SVG.jsx"
+import cgdesignsvg  from "../assets/svgjsx/cg_design_svg.jsx"
+import domainregistrationsvg  from "../assets/svgjsx/domain_registration_svg.jsx"
+
 
 export const brandImgs = [
    brand1,
@@ -33,7 +41,7 @@ export const brandImgs = [
 ]
 
 
-export const technologyIcons = {
+export const technologyIcons = [
     technologyIcon1,
     technologyIcon2,
     technologyIcon3,
@@ -44,4 +52,16 @@ export const technologyIcons = {
     technologyIcon8,
     technologyIcon9,
     technologyIcon10
+]
+
+
+export const serviceSvg = {
+    
+    webdesigndevelopment,
+    Hostingsslsvg,
+    cmssvg,
+    DigitalMarketingsvg,
+    cgdesignsvg,
+    domainregistrationsvg,
+    smsMarketingsvg
 }
