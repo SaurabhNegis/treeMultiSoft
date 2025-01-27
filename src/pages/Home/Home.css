@@ -14,13 +14,15 @@
     max-width: 2000px; /* Max width for large screens */
     margin: 0 auto; /* Centers the container horizontally */
   }
+
+
   
   /* Header Section */
   .header-section {
     color: white;
 
     padding: 100px 40px;
-
+  z-index: 10;
   } 
   
   
@@ -28,7 +30,7 @@
     margin-bottom: 100px;
   }
 
-  .header-content h1{
+ .header-content h1{
   font-size:42px;
   line-height: 1.5;
   
@@ -67,6 +69,8 @@
    font-size: 45px;
    font-weight:500;
   }
+
+
   .stat-item{
   margin-bottom:30px;
   }
@@ -77,21 +81,67 @@
     height: auto;
   } */
 
-  .header-stats{
+  .headerSvg{
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Optional max width */
+  
   }
+  
 
-.svg-container{
+
+  .svg-container{
+  
     position: absolute;
-    top: 5%; /* Adjusts vertical position */
+    width: 100%;
+    max-width: 600px;
+    height: auto;  
     right: -10%; /* Moves the SVG half out of the screen from the left */
     transform: translateY(-50%); /* Center it vertically */
     z-index: -1
 }
 
-  .headerSvg{
-   /* Moves the SVG half out of the screen from the left */
-  }
+/* Example svg-container responsive breakpoints */
+ @media (max-width: 1400px) {
+  .svg-container {
+    max-width: 500px;
+    right: -7%; /* Moves the SVG half out of the screen from the left */
+    transform: translateY(-50%); /* Center it vertically */
 
+ }
+ }
+ @media (max-width: 1300px) {
+  .svg-container {
+    max-width: 500px;
+    /* Adjusts vertical position */
+    right: -10%; /* Moves the SVG half out of the screen from the left */
+    transform: translateY(-50%); /* Center it vertically */
+
+ }
+ }
+
+ @media (max-width: 1200px) {
+  .svg-container {
+    max-width: 500px;
+    right: -25%; /* Moves the SVG half out of the screen from the left */
+    transform: translateY(-50%); /* Center it vertically */
+
+ }
+ }
+
+ @media (max-width: 768px) {
+  .svg-container {
+    max-width: 450px;
+
+   }
+ }
+
+ @media (max-width: 480px) {
+  .svg-container {
+    max-width: 350px;
+ 
+  }
+}
 
 
 
@@ -221,6 +271,9 @@
 }
 
 .svg-container1{
+    width: 100%;
+
+  max-width: 600px;
   position: absolute;
   top: 30%; /* Adjusts vertical position */
   left: -15%;
@@ -680,7 +733,7 @@ padding-left: 10px;
   font-size: 40px;
   font-weight: bold;
   text-align: center;
-  margin-bottom: 10rem;
+  margin-bottom: 5rem;
 }
 
 .section-title-p{

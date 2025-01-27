@@ -1,7 +1,8 @@
 import React from 'react'
 
 const headerSvg = () => (
-<svg  width="594" height="466" viewBox="0 0 594 466" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg   viewBox="0 0 594 466" fill="none" xmlns="http://www.w3.org/2000/svg"     style={{ width: "100%", height: "auto" }} // Responsive size
+>
 <mask id="mask0_23_336" style={{ marginRight: '10px', color: 'red' }}
  maskUnits="userSpaceOnUse" x="0" y="18" width="594" height="466">
 <rect y="18" width="594" height="466" fill="white"/>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useRef}from "react";
 import "./Home.css";
 import HeaderSvg from '../../assets/svgjsx/headerSvg.jsx'
 import Creative from '../../assets/svgjsx/creative.jsx'
@@ -9,9 +9,12 @@ import Slider from "react-slick"; // Make sure this import is correct
 import picture from "../../assets/images/picture.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+
 import ReactStars from "react-rating-stars-component";
 import Experties1 from "../../assets/svgjsx/experties1.jsx";
 import Experties2 from "../../assets/svgjsx/experties2.jsx";
+import { motion,useInView } from "framer-motion";
+
 const Home = () => {
 
   const blogSettings = {
@@ -235,16 +238,21 @@ const Home = () => {
   // Add more blog posts here
 ];
 
-
+const contentRef = useRef(null); // Reference for the content section
+  const svgRef = useRef(null); // Reference for the SVG
+  const contentInView = useInView(contentRef, { margin: "0px 0px -50% 0px", once: true }); // Trigger when content enters viewport
+  const svgInView = useInView(svgRef, { margin: "0px 0px -50% 0px", once: true }); // Trigger when SVG enters viewport
 
 
   return (
-    <div className="home-container">
+    <motion.div    className="home-container">
       {/* Header Section */}
-      <header className="header-section">
+      <motion.header initial={{ opacity: 0.9, scale: 1.01 }}
+    animate={{ opacity: 1.2, scale: 1 }}
+    transition={{ duration: 1 }} className="header-section">
         <div className="header-content">
           <h1>
-            Crafting <span className="main-color">Digital Experiences</span> That <br/> Drive Growth and Success
+            Crafting <span className="main-color-blue">Digital Experiences</span> That <br/> Drive Growth and Success
           </h1>
           <p>
             We provide cutting-edge IT solutions and digital marketing
@@ -254,9 +262,11 @@ const Home = () => {
         </div>
 
         <div className="header-stats flex gap-xxxl align-items  ">
-          <button className="cta-button bg-primary ">Connect with us</button>
+          <motion.button initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1.2 }}  className="cta-button bg-primary ">Connect with us</motion.button>
           <div className="stat-item">
-            <h2>1100<span className="main-color">+</span></h2>
+            <h2>1100 <span className="main-color">+</span></h2>
             <p className="text-color-gray-700">Projects Completed</p>
           </div>
           <div className="stat-item">
@@ -270,12 +280,17 @@ const Home = () => {
           </div>
         </div>
        
-      </header>
-      <div className="svg-container" > 
-            <HeaderSvg className="headerSvg"/>
-       </div>
+      </motion.header>
+      
+    <motion.div  initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1.2, scale: 1 }}
+      transition={{ duration: 1 }}      className="svg-container" > 
+            <HeaderSvg />
+    </motion.div>
 
-    <section className="clients-section">
+    <motion.section
+
+    className="clients-section">
       <div className="clients-text">
         <h2>With great work comes great clients.</h2>
         {/* <p>Here are a few of them.</p> */}
@@ -290,12 +305,15 @@ const Home = () => {
           ))}
         </Slider>
       </div>
-    </section>
+    </motion.section>
 
 
 
           {/* About and Values Section */}
-    <section className="about-values-section">
+    <motion.section             ref={contentRef} 
+            initial={{ opacity: 0.9, y: 20 }}
+            animate={contentInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 1 }} className="about-values-section">
             <div className="flex flex-center">
         <Creative className="headerSvg"/>
 
@@ -332,7 +350,7 @@ const Home = () => {
         <div className="svg-container1" > 
             <HeaderSvg className="headerSvg"/>
        </div>
-      </section>
+      </motion.section>
 
 
 
@@ -517,7 +535,7 @@ const Home = () => {
 
 
 
-    </div>
+    </motion.div>
   );
 };
 
