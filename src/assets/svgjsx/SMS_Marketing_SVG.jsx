@@ -3,8 +3,8 @@ import React from "react";
 
 const SMS_Marketing_SVG = () => (
 <svg
-  width="47"
-  height="73"
+  width="60"
+  height="70"
   xmlns="http://www.w3.org/2000/svg"
   viewBox="0 0 32 32"
   id="DigitalMarketing"

@@ -20,6 +20,7 @@
     flex: 1;
     margin: 10px;
     min-width: 250px;
+    padding: 18px 20px;
   }
   
   .footer-title {
@@ -71,5 +72,4 @@
 
   .footer-contect-info{
     background: #F4F5F9;
-    padding:0 20px;
   }

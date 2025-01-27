@@ -2,7 +2,7 @@ import React from "react";
 
 
 const technologySectionSvg =() => (
-    <svg width="594" height="466" viewBox="0 0 480 450" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg width="594" height="500" viewBox="0 0 480 450" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M480 344.16H0V344.385H480V344.16Z" fill="#EBEBEB"/>
 <path d="M431.904 358.641H400.109V358.866H431.904V358.641Z" fill="#EBEBEB"/>
 <path d="M317.971 361.089H309.629V361.314H317.971V361.089Z" fill="#EBEBEB"/>

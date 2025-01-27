@@ -4,14 +4,14 @@ import HeaderSvg from '../../assets/svgjsx/headerSvg.jsx'
 import Creative from '../../assets/svgjsx/creative.jsx'
 import { blogImgs } from "../../assets/assets.js";
 import TechnologySectionSvg from '../../assets/svgjsx/technologySectionSvg.jsx'
-import {brandImgs, technologyIcons,  serviceSvg} from "../../assets/assets.js"
+import {brandImgs, technologyIcons,  serviceSvg, expertiseAreas} from "../../assets/assets.js"
 import Slider from "react-slick"; // Make sure this import is correct
 import picture from "../../assets/images/picture.png"
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import ReactStars from "react-stars";
-
-
+import ReactStars from "react-rating-stars-component";
+import Experties1 from "../../assets/svgjsx/experties1.jsx";
+import Experties2 from "../../assets/svgjsx/experties2.jsx";
 const Home = () => {
 
   const blogSettings = {
@@ -50,7 +50,39 @@ const Home = () => {
     infinite: true,
     speed: 500,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 1500,
+    slidesToShow: 5, // Show 3 slides at a time (adjust based on your screen size)
+    slidesToScroll: 1,
+    dots: false,
+    centerMode: true, // For better control of spacing
+    centerPadding: '0', // Disable additional padding around centered slide
+    responsive: [
+      {
+        breakpoint: 1024, // 1024px and below
+        settings: {
+          slidesToShow: 3, // Show 3 slides on medium screens
+        },
+      },
+      {
+        breakpoint: 768, // 768px and below
+        settings: {
+          slidesToShow: 2, // Show 2 slides on smaller screens
+        },
+      },
+      {
+        breakpoint: 480, // 480px and below
+        settings: {
+          slidesToShow: 1, // Show 1 slide on very small screens
+        },
+      },
+    ],
+  };
+  
+  const testimonialsSettings = {
+    infinite: true,
+    speed: 500,
+    autoplay: true,
+    autoplaySpeed: 1500,
     slidesToShow: 3, // Show 3 slides at a time (adjust based on your screen size)
     slidesToScroll: 1,
     dots: true,
@@ -205,6 +237,7 @@ const Home = () => {
 
 
 
+
   return (
     <div className="home-container">
       {/* Header Section */}
@@ -242,18 +275,23 @@ const Home = () => {
             <HeaderSvg className="headerSvg"/>
        </div>
 
-      <section className="clients-section">
+    <section className="clients-section">
       <div className="clients-text">
         <h2>With great work comes great clients.</h2>
         {/* <p>Here are a few of them.</p> */}
         <h3 className="main-color">Trusted by</h3>
       </div>
       <div className="clients-logos">
-        {brandImgs.map((logo, index) => (
-          <img key={index} src={logo} alt={logo.alt} className="logo" />
-        ))}
+        <Slider {...settings}>
+          {brandImgs.map((logo, index) => (
+            <div key={index}>
+              <img src={logo} alt={`Client Logo ${index}`} className="logo" />
+            </div>
+          ))}
+        </Slider>
       </div>
     </section>
+
 
 
           {/* About and Values Section */}
@@ -394,85 +432,43 @@ const Home = () => {
 </section>
 
 
+<section className="expertise-section">
+      {/* Background SVGs */}
+      <div className="background-svg top-left"></div>
+      <div className="background-svg bottom-right"></div>
+      <div className="expertise-svg1">
+      <Experties1/>
+      </div>
+      <div className="expertise-svg2">
+      <Experties2/>
+      </div>
 
-<section className="industries-container flex flex-column">
-<div className="industries-title">
-  <p>We Help You</p>
-  <h2>Our Expertise</h2>
-  </div>
-<div className="industries ">
- 
-  
+      <div className="expertise-container">
+        <p className="section-title-p">We Help you</p>
+        <h2 className="section-title">Our Expertise</h2>
 
-  <div className="industry-item   gap-sm">
-  <div className="industry-card">
-    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
-  </div>
-    <p className="industry-name ">Education</p>
-  </div>
+        {/* Grid of Expertise Areas */}
+        <div className="grid">
+          {expertiseAreas.map((area, index) => (
+            <div key={index} className="grid-item flex-center flex-column">
+              <area.icon/>
+              <h4>{area.name}</h4>
+            </div>
+          ))}
+        </div>
 
-  <div className="industry-item  gap-sm">
-  <div className="industry-card">
-    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
-  </div>
-    <p className="industry-name">Energy & Utility</p>
-  </div>
+        {/* Add More Section */}
+        {/* <div className="add-more">
+          <button className="add-more-button">Add More for Rival</button>
+        </div> */}
+      </div>
+    </section>  
 
-  <div className="industry-item  gap-sm">
-  <div className="industry-card">
-    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
-  </div>
-    <p className="industry-name">Real Estate</p>
-  </div>
-
-  <div className="industry-item  gap-sm">
-  <div className="industry-card">
-    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
-  </div>
-    <p className="industry-name">Government</p>
-  </div>
-
-  <div className="industry-item  gap-sm">
-  <div className="industry-card">
-    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
-  </div>
-  <p className="industry-name">Media & Entertainment</p>
-  </div>
-
-
-  <div className="industry-item  gap-sm">
-  <div className="industry-card">
-    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
-  </div>
-  <p className="industry-name">Ads & Marketing</p>
-  </div>
-
-  <div className="industry-item  gap-sm">
-  <div className="industry-card">
-    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
-  </div>
-  <p className="industry-name">Hospital</p>
-  </div>
-
-  <div className="industry-item  gap-sm">
-  <div className="industry-card">
-    {/* <img className="industry-icon" src="path_to_your_image_1.png" alt="Education Icon" /> */}
-  </div>
-  <p className="industry-name">E-Commerce</p>
-  </div>
-  </div>
-
-
-    <button className="other-services-button">
-    Other industries <span className="arrow">→</span>
-  </button>
-
-</section>
 
 <section className="testimonial-section">
 <h2>What Our Clients Say</h2>
       <div className="testimonial-container">
-        <Slider {...settings} className="testimonial-slider">
+        <Slider {...testimonialsSettings} className="testimonial-slider">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="testimonial-slide">
               <div className="slider-img">
@@ -484,9 +480,12 @@ const Home = () => {
                 count={5}
                 value={testimonial.rating}
                 size={24}
-                color2={"#DC4618"}
+                activeColor={"#DC4618"}
                 edit={false} // Set to true if you want the user to edit
               />
+
+
+
               </div>
               <p className="slider-text">"{testimonial.message}"</p>
               <div className="slider-reviewer">
@@ -515,6 +514,9 @@ const Home = () => {
       </Slider>
     </div>
 </section>
+
+
+
     </div>
   );
 };

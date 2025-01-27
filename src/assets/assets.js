@@ -30,6 +30,17 @@ import blogImg1 from "../assets/images/blogImg1.png"
 import blogImg2 from "../assets/images/blogImg2.png"
 import blogImg3 from "../assets/images/blogImg3.png"
 import blogImg4 from "../assets/images/blogImg4.png"
+import Ecommerce from "../assets/svgjsx/ecommerce.jsx";
+import AmbulanceSvg from "../assets/svgjsx/ambulanceSvg.jsx";
+import GovernmentSvg from "../assets/svgjsx/governmentSvg.jsx";
+import NewsSvg from "../assets/svgjsx/newsSvg.jsx";
+import AdsSvg from "../assets/svgjsx/adsSvg.jsx"
+import EnergySvg from "../assets/svgjsx/energySvg.jsx";
+import EducationSvg from "../assets/svgjsx/educationSvg.jsx";
+import RealEstateSvg from "../assets/svgjsx/realEstateSvg.jsx";
+import RegruitmentSvg from './svgjsx/regruitmentSvg.jsx';
+
+
 
 export const brandImgs = [
    brand1,
@@ -42,8 +53,6 @@ export const brandImgs = [
    brand8,
    brand9,
 ]
-
-
 export const technologyIcons = [
     technologyIcon1,
     technologyIcon2,
@@ -56,8 +65,6 @@ export const technologyIcons = [
     technologyIcon9,
     technologyIcon10
 ]
-
-
 export const serviceSvg = {
     
     webdesigndevelopment,
@@ -68,10 +75,20 @@ export const serviceSvg = {
     domainregistrationsvg,
     smsMarketingsvg
 }
-
 export const blogImgs = {
     blogImg1,
     blogImg2,
     blogImg3,
     blogImg4,
 }
+export const expertiseAreas = [
+    { name: "Government", icon:GovernmentSvg },
+    { name: "Hospital", icon: AmbulanceSvg },
+    { name: "Ads & Marketing",icon:AdsSvg  },
+    { name: "Education", icon: EducationSvg},
+    { name: "E-Commerce", icon: Ecommerce},
+    { name: "Media & Entertainment",icon: NewsSvg },
+    { name: "Regruitement", icon: RegruitmentSvg  },
+    { name: "Real Estate", icon:RealEstateSvg },
+    { name: "Energy & Utility", icon: EnergySvg}
+  ];
